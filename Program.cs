@@ -28,7 +28,6 @@ namespace BuildASynth
             OCSs = Console.ReadLine();
             String Result = Console.ReadLine();
 
-
             int oscillators;
 
             bool isOscillatorsValid = false;
@@ -50,27 +49,20 @@ namespace BuildASynth
                 isOscillatorsValid = true;
             }
 
-
             /* Step two: Filter section. If you know synths you know that you dont have to choose the filter(s) first, these
             steps are only for example */
             Console.WriteLine("Choose Filters: Available: Lowpass, Highpass, Bandpass ");
             FLTs = Console.ReadLine();
 
-         
-
-
-        
             //Step three: reverbs
 
             Console.WriteLine("Choose a Reverb: Available: Hall, Short, Deep Space");
             Revb = Console.ReadLine();
 
 
-
             //Step four: Chorus
             Console.WriteLine("Choose a Chorus: Available:  Soft, double");
             CHOR = Console.ReadLine();
-
 
             //Step five: Deley
 
@@ -81,16 +73,12 @@ namespace BuildASynth
             Console.WriteLine("Choose a Distortion: Available: Fuzztone, Wavefolding ");
             DIST = Console.ReadLine();
 
-
-
             //Step seven: choose a name for your Synth
             Console.WriteLine("Please choose a name for your new Synth!: ");
             CHSNM = Console.ReadLine();
 
-
             Console.WriteLine("Thanks! Your new synth is ready to buy! Please depost $2.2MILLION DOLLARS!");
 
-          
             Console.WriteLine($"Your Synth has the following features:\nOCS: {OCSs}\nFLTs: {FLTs}\nRevb {Revb}\nCHOR: {CHOR}\nDLY: {DLY}\nDIST: {DIST}\nCHSNM: {CHSNM}");
 
             Console.ReadLine();
