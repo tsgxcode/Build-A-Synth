@@ -90,7 +90,7 @@ namespace BuildASynth
 
             Console.WriteLine("Thanks! Your new synth is ready to buy! Please depost $2.2MILLION DOLLARS!");
 
-           
+          
             Console.WriteLine($"Your Synth has the following features:\nOCS: {OCSs}\nFLTs: {FLTs}\nRevb {Revb}\nCHOR: {CHOR}\nDLY: {DLY}\nDIST: {DIST}\nCHSNM: {CHSNM}");
 
             Console.ReadLine();
