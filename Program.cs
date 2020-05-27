@@ -1,5 +1,4 @@
-﻿
-using System;
+﻿using System;
 
 
 namespace BuildASynth
@@ -13,14 +12,9 @@ namespace BuildASynth
              
              Building VST aka Vurtual Instrument in this case a Synthesizer.
              A user can pick different moduals for a modular Synth, Oscilators, reverbs, filters, etc.
-
              The choices can be stored in a text file.
              */
             string OCSs, FLTs, Revb, CHOR, DLY, DIST, CHSNM;
-
-
-
-            
 
             //List of muduals available. Probably can be done with fewer linse of code. More work to be done on this.
             // Step one the Oscillators
@@ -38,10 +32,8 @@ namespace BuildASynth
                 {
                     Console.WriteLine("Not a valid option, try again.");
                     continue;
-
-
                 }
-                if (oscillators >= 6)
+                if (oscillators >= 5)
                 {
                     Console.WriteLine("Please choose fewer");
                     continue;
@@ -51,34 +43,33 @@ namespace BuildASynth
 
             /* Step two: Filter section. If you know synths you know that you dont have to choose the filter(s) first, these
             steps are only for example */
-            Console.WriteLine("Choose Filters: Available: Lowpass, Highpass, Bandpass ");
+            Console.WriteLine("Choose Filters: Available types are: Lowpass, Highpass, Bandpass ");
             FLTs = Console.ReadLine();
 
             //Step three: reverbs
-
-            Console.WriteLine("Choose a Reverb: Available: Hall, Short, Deep Space");
+            Console.WriteLine("Pick a Reverb: Available: Hall, Short, Deep Space");
             Revb = Console.ReadLine();
 
-
             //Step four: Chorus
-            Console.WriteLine("Choose a Chorus: Available:  Soft, double");
+            Console.WriteLine("Pick a Chorus: Available:  Soft, double");
             CHOR = Console.ReadLine();
 
             //Step five: Deley
-
-            Console.WriteLine("Choose a Delay: Available: Granular, Ping Pong  ");
+            Console.WriteLine("Pick a Delay: Available: Granular, Ping Pong  ");
             DLY = Console.ReadLine();
 
             //Step six: Distortion
-            Console.WriteLine("Choose a Distortion: Available: Fuzztone, Wavefolding ");
+            Console.WriteLine("Pick Distortion: Available: Fuzztone, Wavefolding ");
             DIST = Console.ReadLine();
 
             //Step seven: choose a name for your Synth
             Console.WriteLine("Please choose a name for your new Synth!: ");
             CHSNM = Console.ReadLine();
 
+
             Console.WriteLine("Thanks! Your new synth is ready to buy! Please depost $2.2MILLION DOLLARS!");
 
+            //This line was shortend to one line from multiple lines, mostly from memory and what seemed to make sense. This is to simply document my progress in memorizing.
             Console.WriteLine($"Your Synth has the following features:\nOCS: {OCSs}\nFLTs: {FLTs}\nRevb {Revb}\nCHOR: {CHOR}\nDLY: {DLY}\nDIST: {DIST}\nCHSNM: {CHSNM}");
 
             Console.ReadLine();
