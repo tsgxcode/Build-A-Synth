@@ -5,7 +5,7 @@ namespace BuildASynth
 {
     class Program
     {
-        static void Main()
+        static void Main(string[] args)
         {
 
             /*FakeVST or Build -A- Synth Modular V.1.0. T.Scott George. Main portfolio piece in CSharp.
@@ -20,31 +20,39 @@ namespace BuildASynth
             // Step one the Oscillators
             Console.WriteLine("Choose 1-5 OSCs: ");
             OCSs = Console.ReadLine();
-            String Result = Console.ReadLine();
-
-            int oscillators;
-
+           
             bool isOscillatorsValid = false;
             while (!isOscillatorsValid)
+
             {
-                OCSs = Console.ReadLine();
-                if (!int.TryParse(OCSs, out oscillators))
+               
+                if (!int.TryParse(OCSs, out int oscillators))
+
                 {
                     Console.WriteLine("Not a valid option, try again.");
                     continue;
                 }
-                if (oscillators >= 5)
+                if (oscillators > 5) 
                 {
                     Console.WriteLine("Please choose fewer");
                     continue;
                 }
-                else if (oscillators <= 0)
+
+                else if (oscillators < 0)
                 {
                     Console.WriteLine("Please choose one or more");
                     continue;
                 }
+                
                 isOscillatorsValid = true;
+                {
+                    break;
+                }
             }
+
+          
+            
+
 
             /* Step two: Filter section. If you know synths you know that you dont have to choose the filter(s) first, these
             steps are only for example */
@@ -69,7 +77,7 @@ namespace BuildASynth
             //This line was shortend to one line from multiple lines, mostly from memory and what seemed to make sense. This is to simply document my progress in memorizing.
             Console.WriteLine($"Your Synth has the following features:\nOCS: {OCSs}\nFLTs: {FLTs}\nCHOR  {CHOR}\nDLY: {DLY}\nCHSNM: {CHSNM}");
 
-            Console.ReadLine();
+         
         }
     }
 }
